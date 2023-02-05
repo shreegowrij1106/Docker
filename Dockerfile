@@ -4,7 +4,7 @@ LABEL description "Portfolio extract from git and running on centos7 using apach
 WORKDIR /root
 RUN yum -y install httpd && \
 yum clean all && \
-cp -rf profile/* /var/www/html/
+cp -rf /root/shreeData/profile/* /var/www/html/
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
 #EXPOSE 443
